@@ -1,0 +1,36 @@
+<div class="container w-100 h-100 d-flex justify-content-center align-items-center">
+
+    {{#if success}}
+    <div class="alert alert-success">{{msg}}</div>
+    {{/if}}
+
+    {{#if error}}
+    <div class="alert alert-danger">Purchase Error: {{msg}}</div>
+    {{/if}}
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <h1>Web Development Ebook</h1>
+            <p class="lead">
+                Learn Web Dev
+            </p>
+            <form action="/charge" method="post">
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button d-none"
+                    data-key="pk_test_rtwL1mrj5J1lXtOslnCCkhnm00gbtJmpMA" data-amount="2500"
+                    data-name="Web Development Ebook" data-description="Ebook"
+                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="auto">
+                    </script>
+                <script>
+                        // In order to style own button, you need to display none the 
+                        // stripe-button-el and create new button element below this script
+                </script>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <div class="myShadow w-100 h-100 p-2">
+                <h1 class="text-center">
+                    The Ebook
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
